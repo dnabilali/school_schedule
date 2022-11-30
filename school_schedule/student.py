@@ -1,5 +1,8 @@
 class Student():
     def __init__(self, name, grade, classes):
+        if not name or not grade:
+            raise TypeError("Name and/or grade can't be blank")
+
         self.name = name
         self.grade = grade
         self.classes = classes
