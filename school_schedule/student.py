@@ -8,6 +8,10 @@ class Student():
         self.classes = classes
 
     def add_class(self, class_name):
+        for one_class in self.classes:
+            if one_class.lower() == class_name.lower():
+                return None
+
         self.classes.append(class_name)
 
     def get_num_classes(self):
